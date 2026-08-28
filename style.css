@@ -1,0 +1,331 @@
+/* ================================
+   MDF CONSULTANCY
+   Main Stylesheet - Dark Orange Theme
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background-color: #ffffff;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.site-header {
+    background-color: #ffffff;
+    padding: 18px 30px;
+    border-bottom: 2px solid #e05305; /* Primary Dark Orange Accent */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    display: block;
+    width: 240px;
+    height: auto;
+}
+
+.header-container p {
+    margin: 0;
+    color: #555555;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #fff9f5; /* Warm subtle tint */
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #1a1a1a;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #d94e00; /* Dark Orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.button:hover {
+    background-color: #b33f00; /* Deep Rust Orange */
+    transform: translateY(-2px);
+}
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.services,
+.about,
+.contact {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* ================================
+   SERVICE CARDS
+================================ */
+
+.service-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #d94e00;
+    box-shadow: 0 10px 25px rgba(217, 78, 0, 0.12);
+}
+
+.service-card h3 {
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555555;
+}
+
+/* ================================
+   EXPANDABLE TAX & VAT STYLES
+================================ */
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.region-accordion {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.region-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.region-item[open] {
+    border-color: #d94e00;
+}
+
+.region-header {
+    padding: 12px 15px;
+    font-weight: bold;
+    color: #1a1a1a;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.region-header::-webkit-details-marker {
+    display: none;
+}
+
+.region-header::after {
+    content: '▼';
+    font-size: 0.75rem;
+    color: #d94e00;
+    transition: transform 0.3s ease;
+}
+
+.region-item[open] .region-header::after {
+    transform: rotate(180deg);
+}
+
+.region-header:hover {
+    background-color: #fff5ee;
+}
+
+.task-list {
+    padding: 15px 20px 15px 35px;
+    margin: 0;
+    background-color: #fafafa;
+    border-top: 1px solid #eaeaea;
+}
+
+.task-list li {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+}
+
+.task-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ================================
+   SOFTWARE BADGES STYLES
+================================ */
+
+.software-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.software-badge {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.software-badge:hover {
+    border-color: #d94e00;
+    background-color: #fff5ee;
+}
+
+.software-badge.highlight {
+    background-color: #fff0e6;
+    border-color: #d94e00;
+    color: #b33f00;
+}
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #4a4a4a;
+}
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact {
+    text-align: center;
+    background-color: #fff9f5;
+    max-width: none;
+}
+
+.contact p {
+    margin-bottom: 25px;
+    color: #4a4a4a;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+    border-top: 3px solid #d94e00;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero h2 {
+        font-size: 2.1rem;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .services,
+    .about,
+    .contact {
+        padding: 60px 20px;
+    }
+}
