@@ -375,3 +375,43 @@ footer {
         margin: 0 auto;
     }
 }
+/* Clients Section Styling */
+.clients-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light grey background to contrast sections */
+  text-align: center;
+}
+
+.clients-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Space between logos */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.client-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7; /* Gives a subtle fade effect by default */
+}
+
+/* Hover effects when a user points their mouse at a logo */
+.client-logo-link:hover {
+  transform: scale(1.05); /* Slightly enlarges logo */
+  opacity: 1; /* Makes logo fully vibrant */
+}
+
+.client-logo-img {
+      max-width: 150px; /* Limits maximum size of the logos */
+  height: auto;     /* Maintains aspect ratio */
+  display: block;
+}
