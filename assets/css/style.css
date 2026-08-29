@@ -339,7 +339,9 @@ body {
     margin: 0 auto;
 }
 
-.client-logo-link {
+/* Shared bounding box for BOTH links and static div cards */
+.client-logo-link,
+.client-logo-card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,7 +365,13 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-.client-logo-img {
+.client-logo-card {
+    cursor: default;
+}
+
+/* Restrict image dimensions inside both container types */
+.client-logo-link .client-logo-img,
+.client-logo-card .client-logo-img {
     max-width: 100%;
     max-height: 100%;
     width: auto;
@@ -374,7 +382,8 @@ body {
 
 /* Mobile Adjustment */
 @media (max-width: 768px) {
-    .client-logo-link {
+    .client-logo-link,
+    .client-logo-card {
         width: 140px;
         height: 75px;
     }
