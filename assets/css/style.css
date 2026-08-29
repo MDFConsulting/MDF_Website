@@ -456,3 +456,22 @@ footer {
         margin: 10px auto 0;
     }
 }
+.client-logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 90px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .client-logo-card {
+        width: 140px;
+        height: 75px;
+    }
+}
