@@ -44,7 +44,7 @@ body {
 
 .logo img {
     display: block;
-    width: 210px; /* Reduced logo width from 240px to 170px */
+    width: 210px;
     height: auto;
 }
 
