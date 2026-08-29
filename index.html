@@ -17,10 +17,10 @@
     <meta property="og:description" content="Reliable bookkeeping, tax compliance, and financial reporting for businesses in the UAE, UK, and KSA.">
     <meta property="og:image" content="https://mdf-consultancy.com/assets/images/mdf-logo.png">
 
-    <!-- Stylesheets (Using relative path for GitHub Pages compatibility) -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Google Search Console HTML Verification Tag (Optional - paste here if using HTML tag method) -->
+    <!-- Google Search Console Verification Meta Tag (if applicable) -->
     <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
 </head>
 
@@ -28,7 +28,7 @@
 
 <header class="site-header">
     <div class="header-container">
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="MDF Consultancy Home">
             <img src="assets/images/mdf-logo.png" alt="MDF Consultancy Logo">
         </a>
 
@@ -58,46 +58,61 @@
                     </p>
                 </div>
 
-                <!-- Interactive Tax & VAT Section -->
-<div class="service-card expandable-card">
-    <h3>Tax & VAT Compliance</h3>
-    <p class="card-subtitle">Click a region below to view available compliance services:</p>
-    
-    <div class="region-accordion">
-        <!-- UK Region -->
-        <details class="region-item">
-            <summary class="region-header">🇬🇧 United Kingdom (UK)</summary>
-            <ul class="task-list">
-                <li>VAT Return Preparation & Submission</li>
-                <li>VAT One Stop Shop (OSS) Filings</li>
-                <li>Corporate Tax Filings</li>
-                <li>HMRC Compliance & Financial Reporting</li>
-            </ul>
-        </details>
+                <!-- Interactive Tax & VAT Section with Image-based Flags -->
+                <div class="service-card expandable-card">
+                    <h3>Tax & VAT Compliance</h3>
+                    <p class="card-subtitle">Click a region below to view available compliance services:</p>
+                    
+                    <div class="region-accordion">
+                        <!-- UK Region -->
+                        <details class="region-item">
+                            <summary class="region-header">
+                                <span class="region-title">
+                                    <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="24" height="18" alt="UK Flag" class="flag-icon"> 
+                                    United Kingdom (UK)
+                                </span>
+                            </summary>
+                            <ul class="task-list">
+                                <li>VAT Return Preparation & Submission</li>
+                                <li>VAT One Stop Shop (OSS) Filings</li>
+                                <li>Corporate Tax Filings</li>
+                                <li>HMRC Compliance & Financial Reporting</li>
+                            </ul>
+                        </details>
 
-        <!-- UAE Region -->
-        <details class="region-item">
-            <summary class="region-header">🇦🇪 United Arab Emirates (UAE)</summary>
-            <ul class="task-list">
-                <li>UAE VAT Registration & Return Filing</li>
-                <li>UAE Corporate Tax Preparation & Filing</li>
-                <li>FTA (Federal Tax Authority) Audit Support</li>
-                <li>Financial Record Alignment for Local Compliance</li>
-            </ul>
-        </details>
+                        <!-- UAE Region -->
+                        <details class="region-item">
+                            <summary class="region-header">
+                                <span class="region-title">
+                                    <img src="https://flagcdn.com/24x18/ae.png" srcset="https://flagcdn.com/48x36/ae.png 2x" width="24" height="18" alt="UAE Flag" class="flag-icon"> 
+                                    United Arab Emirates (UAE)
+                                </span>
+                            </summary>
+                            <ul class="task-list">
+                                <li>UAE VAT Registration & Return Filing</li>
+                                <li>UAE Corporate Tax Preparation & Filing</li>
+                                <li>FTA (Federal Tax Authority) Audit Support</li>
+                                <li>Financial Record Alignment for Local Compliance</li>
+                            </ul>
+                        </details>
 
-        <!-- KSA Region -->
-        <details class="region-item">
-            <summary class="region-header">🇸🇦 Kingdom of Saudi Arabia (KSA)</summary>
-            <ul class="task-list">
-                <li>VAT Return Preparation & Filing</li>
-                <li>ZATCA Compliance & e-Invoicing Support</li>
-                <li>Corporate Income Tax & Zakat Filings</li>
-                <li>Financial Statement Adjustments</li>
-            </ul>
-        </details>
-    </div>
-</div>
+                        <!-- KSA Region -->
+                        <details class="region-item">
+                            <summary class="region-header">
+                                <span class="region-title">
+                                    <img src="https://flagcdn.com/24x18/sa.png" srcset="https://flagcdn.com/48x36/sa.png 2x" width="24" height="18" alt="KSA Flag" class="flag-icon"> 
+                                    Kingdom of Saudi Arabia (KSA)
+                                </span>
+                            </summary>
+                            <ul class="task-list">
+                                <li>VAT Return Preparation & Filing</li>
+                                <li>ZATCA Compliance & e-Invoicing Support</li>
+                                <li>Corporate Income Tax & Zakat Filings</li>
+                                <li>Financial Statement Adjustments</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
 
                 <!-- Software & Systems Section -->
                 <div class="service-card">
