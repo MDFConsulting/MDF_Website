@@ -26,8 +26,8 @@ body {
 
 .site-header {
     background-color: #ffffff;
-    padding: 18px 30px;
-    border-bottom: 2px solid #e05305; /* Primary Dark Orange Accent */
+    padding: 10px 30px; /* Reduced top/bottom padding from 18px to 10px */
+    border-bottom: 2px solid #e05305;
 }
 
 .header-container {
@@ -44,14 +44,14 @@ body {
 
 .logo img {
     display: block;
-    width: 240px;
+    width: 170px; /* Reduced logo width from 240px to 170px */
     height: auto;
 }
 
 .header-container p {
     margin: 0;
     color: #555555;
-    font-size: 0.95rem;
+    font-size: 0.85rem; /* Slightly smaller tagline text */
     font-weight: 500;
 }
 
@@ -61,21 +61,21 @@ body {
 
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-color: #fff9f5; /* Warm subtle tint */
+    padding: 60px 20px; /* Reduced vertical padding from 100px to 60px */
+    background-color: #fff9f5;
 }
 
 .hero h2 {
-    font-size: 2.8rem;
-    max-width: 800px;
-    margin: 0 auto 20px;
+    font-size: 2.1rem; /* Scaled down headline font size from 2.8rem */
+    max-width: 750px;
+    margin: 0 auto 16px;
     color: #1a1a1a;
 }
 
 .hero p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    font-size: 1rem; /* Scaled down paragraph text from 1.1rem */
     color: #4a4a4a;
 }
 
