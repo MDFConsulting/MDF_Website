@@ -389,7 +389,7 @@ body {
     }
 }
 /* ================================
-   TESTIMONIALS SECTION
+   TESTIMONIALS SECTION (BALANCED)
 ================================ */
 
 .testimonials-section {
@@ -410,6 +410,7 @@ body {
     display: flex;
     gap: 25px;
     justify-content: center;
+    align-items: stretch; /* Forces equal height across all cards */
     flex-wrap: wrap;
 }
 
@@ -417,10 +418,10 @@ body {
     flex: 1;
     min-width: 280px;
     max-width: 340px;
-    background-color: #fff9f5; /* Subtle orange tint background */
+    background-color: #fff9f5;
     border: 1px solid #f2e2d8;
     border-radius: 10px;
-    padding: 30px 25px;
+    padding: 25px 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -436,30 +437,42 @@ body {
 }
 
 .quote-icon {
-    font-size: 3rem;
+    font-size: 2.2rem;
     line-height: 1;
     color: #d94e00;
     font-family: Georgia, serif;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
 }
 
 .testimonial-text {
-    font-size: 0.95rem;
+    font-size: 0.88rem; /* Reduced font size to fit paragraphs cleanly */
     color: #4a4a4a;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 20px;
     font-style: italic;
+    max-height: 220px; /* Caps content height to keep grid uniform */
+    overflow-y: auto; /* Allows smooth scrolling for lengthy text if needed */
+    padding-right: 5px;
+}
+
+/* Custom subtle scrollbar for the long text card */
+.testimonial-text::-webkit-scrollbar {
+    width: 4px;
+}
+.testimonial-text::-webkit-scrollbar-thumb {
+    background-color: #f2e2d8;
+    border-radius: 4px;
 }
 
 .testimonial-author strong {
     display: block;
     color: #1a1a1a;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .testimonial-author span {
     display: block;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: #777777;
     margin-top: 2px;
 }
@@ -472,6 +485,10 @@ body {
     
     .testimonial-card {
         max-width: 100%;
+    }
+    
+    .testimonial-text {
+        max-height: none; /* Allows natural length on mobile vertical stacks */
     }
 }
 /* ================================
