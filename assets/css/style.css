@@ -421,7 +421,7 @@ body {
     background-color: #fff9f5;
     border: 1px solid #f2e2d8;
     border-radius: 10px;
-    padding: 25px 20px;
+    padding: 15px 15px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -437,18 +437,18 @@ body {
 }
 
 .quote-icon {
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1;
     color: #d94e00;
     font-family: Georgia, serif;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .testimonial-text {
     font-size: 0.88rem; /* Reduced font size to fit paragraphs cleanly */
     color: #4a4a4a;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    line-height: 1.45;
+    margin-bottom: 12px;
     font-style: italic;
     max-height: 220px; /* Caps content height to keep grid uniform */
     overflow-y: auto; /* Allows smooth scrolling for lengthy text if needed */
