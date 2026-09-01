@@ -437,7 +437,7 @@ body {
 }
 
 .quote-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1;
     color: #d94e00;
     font-family: Georgia, serif;
@@ -468,6 +468,7 @@ body {
     display: block;
     color: #1a1a1a;
     font-size: 0.95rem;
+    margin-top: auto;
 }
 
 .testimonial-author span {
