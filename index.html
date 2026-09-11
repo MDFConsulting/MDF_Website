@@ -122,7 +122,7 @@
                     </p>
                     
                     <div class="software-grid">
-                        <div class="software-badge highlight">
+                        <div class="software-badge highlight clickable-badge" onclick="openCertModal()" role="button" tabindex="0" title="Click to view Xero Certificate">
                             <span>Xero (Certified)</span>
                         </div>
                         <div class="software-badge">
@@ -137,9 +137,9 @@
                          <div class="software-badge">
                             <span>Wave</span>
                         </div>   
-                          <div class="software-badge">
+                         <div class="software-badge">
                             <span>Wafeq</span>
-                        </div>                                             
+                        </div>                                                  
                         <div class="software-badge">
                             <span>MS Office / Excel</span>
                         </div>
@@ -210,7 +210,7 @@
                 <a href="https://expatmortgageexpert.com/" target="_blank" rel="noopener noreferrer" class="client-logo-link">
                         <img src="assets/images/expat-logo.png" alt="Expat Mortgage Expert Logo" class="client-logo-img">
                     </a> 
-            <!-- Client without website (uses div with same styling, plus un-clickable cursor) --> 
+            <!-- Client without website --> 
               <div class="client-logo-link static-logo">
                 <img src="assets/images/ColorStudio-logo.jpeg" alt="The Color Studio Logo" class="client-logo-img">
               </div>
@@ -218,7 +218,8 @@
             </div>
           </div>
         </section>      
-<!-- Testimonials Section -->
+
+        <!-- Testimonials Section -->
         <section class="testimonials-section" id="testimonials">
             <h2>What Our Clients Say</h2>
             
@@ -252,7 +253,7 @@
                 <div class="testimonial-card">
                     <div class="quote-icon">“</div>
                     <p class="testimonial-text">
-                        I was suggested to reach out to Maria late 2025 when setting up my new, small business and needed someone to help with accounting  in the UAE. She has always been incredibly quick to turn requests around, very knowledgeable and always supportive. She helped me through the company set up with things like my Xero account and Company Tax registration, among other tasks. Her integrity is very strong and I cannot fault the way she works. I was surprised, as I did not expect this level of expertise and support from someone sitting thousand's of miles away, - she works as if The Masterkey Guild is her company too.
+                        I was suggested to reach out to Maria late 2025 when setting up my new, small business and needed someone to help with accounting in the UAE. She has always been incredibly quick to turn requests around, very knowledgeable and always supportive. She helped me through the company set up with things like my Xero account and Company Tax registration, among other tasks. Her integrity is very strong and I cannot fault the way she works. I was surprised, as I did not expect this level of expertise and support from someone sitting thousand's of miles away, - she works as if The Masterkey Guild is her company too.
                     </p>
                     <div class="testimonial-author">
                         <strong>The Masterkey Guild</strong>
@@ -262,6 +263,7 @@
 
             </div>
         </section>
+
         <section id="contact" class="contact">
             <h2>Clear Numbers. Smarter Decisions.</h2>
 
@@ -283,6 +285,34 @@
     <footer>
         <p>© 2026 MDF Consultancy. All rights reserved.</p>
     </footer>
+
+    <!-- Xero Certificate Modal Popup -->
+    <div id="certModal" class="modal-overlay" onclick="closeCertModal(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCertModal(event)">&times;</button>
+            <h3>Xero L3 Specialist Certificate</h3>
+            <!-- Ensure your image path matches where you saved the converted certificate image -->
+            <img src="assets/images/xero-certificate.jpg" alt="Xero L3 Specialist Certificate" class="cert-image">
+        </div>
+    </div>
+
+    <script>
+    function openCertModal() {
+        document.getElementById("certModal").classList.add("active");
+    }
+
+    function closeCertModal(event) {
+        if (event.target.id === "certModal" || event.target.classList.contains("modal-close")) {
+            document.getElementById("certModal").classList.remove("active");
+        }
+    }
+
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") {
+            document.getElementById("certModal").classList.remove("active");
+        }
+    });
+    </script>
 
 </body>
 </html>
