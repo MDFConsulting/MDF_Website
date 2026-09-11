@@ -670,3 +670,63 @@ footer {
 .modal-close:hover {
     color: #000;
 }
+/* Smooth Scroll for Page Anchors */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Clickable Badge Link */
+a.software-badge.clickable-badge {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.software-badge.clickable-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Certifications Section Below Main Content */
+.certifications-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.certifications-section h2 {
+    margin-bottom: 30px;
+}
+
+.certification-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.certification-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.certification-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cert-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.cert-inline-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
