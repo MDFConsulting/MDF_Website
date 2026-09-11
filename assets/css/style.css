@@ -26,7 +26,7 @@ body {
 
 .site-header {
     background-color: #ffffff;
-    padding: 10px 30px; /* Reduced top/bottom padding from 18px to 10px */
+    padding: 10px 30px;
     border-bottom: 2px solid #e05305;
 }
 
@@ -51,7 +51,7 @@ body {
 .header-container p {
     margin: 0;
     color: #555555;
-    font-size: 0.85rem; /* Slightly smaller tagline text */
+    font-size: 0.85rem;
     font-weight: 500;
 }
 
@@ -61,12 +61,12 @@ body {
 
 .hero {
     text-align: center;
-    padding: 60px 20px; /* Reduced vertical padding from 100px to 60px */
+    padding: 60px 20px;
     background-color: #fff9f5;
 }
 
 .hero h2 {
-    font-size: 2.1rem; /* Scaled down headline font size from 2.8rem */
+    font-size: 2.1rem;
     max-width: 750px;
     margin: 0 auto 16px;
     color: #1a1a1a;
@@ -75,7 +75,7 @@ body {
 .hero p {
     max-width: 600px;
     margin: 0 auto 24px;
-    font-size: 1rem; /* Scaled down paragraph text from 1.1rem */
+    font-size: 1rem;
     color: #4a4a4a;
 }
 
@@ -276,6 +276,17 @@ body {
     color: #b33f00;
 }
 
+/* Interactive Xero Badge Styling */
+.software-badge.clickable-badge {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.software-badge.clickable-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* ================================
    ABOUT & PHOTO SECTION
 ================================ */
@@ -334,7 +345,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Space between logo boxes */
+    gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -345,15 +356,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* Fixed container bounding box */
     width: 180px;
     height: 90px;
     padding: 10px;
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 8px;
-    
     opacity: 0.85;
     transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -369,27 +377,18 @@ body {
     cursor: default;
 }
 
-/* Restrict image dimensions inside both container types */
 .client-logo-link .client-logo-img,
 .client-logo-card .client-logo-img {
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-    object-fit: contain; /* Prevents stretching & fits any ratio */
+    object-fit: contain;
     display: block;
 }
 
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-    .client-logo-link,
-    .client-logo-card {
-        width: 140px;
-        height: 75px;
-    }
-}
 /* ================================
-   TESTIMONIALS SECTION (BALANCED)
+   TESTIMONIALS SECTION
 ================================ */
 
 .testimonials-section {
@@ -410,7 +409,7 @@ body {
     display: flex;
     gap: 25px;
     justify-content: center;
-    align-items: stretch; /* Forces equal height across all cards */
+    align-items: stretch;
     flex-wrap: wrap;
 }
 
@@ -445,17 +444,16 @@ body {
 }
 
 .testimonial-text {
-    font-size: 0.88rem; /* Reduced font size to fit paragraphs cleanly */
+    font-size: 0.88rem;
     color: #4a4a4a;
     line-height: 1.45;
     margin-bottom: 12px;
     font-style: italic;
-    max-height: 220px; /* Caps content height to keep grid uniform */
-    overflow-y: auto; /* Allows smooth scrolling for lengthy text if needed */
+    max-height: 220px;
+    overflow-y: auto;
     padding-right: 5px;
 }
 
-/* Custom subtle scrollbar for the long text card */
 .testimonial-text::-webkit-scrollbar {
     width: 4px;
 }
@@ -478,20 +476,6 @@ body {
     margin-top: 2px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .testimonials-section {
-        padding: 60px 20px;
-    }
-    
-    .testimonial-card {
-        max-width: 100%;
-    }
-    
-    .testimonial-text {
-        max-height: none; /* Allows natural length on mobile vertical stacks */
-    }
-}
 /* ================================
    CONTACT SECTION
 ================================ */
@@ -509,6 +493,79 @@ body {
 
 .contact-details {
     margin-bottom: 25px;
+}
+
+/* ================================
+   POPUP MODAL STYLES
+================================ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.cert-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #000;
 }
 
 /* ================================
@@ -567,166 +624,22 @@ footer {
         max-width: 280px;
         margin: 10px auto 0;
     }
-}
-.client-logo-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 90px;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    opacity: 0.85;
-}
 
-@media (max-width: 768px) {
+    .client-logo-link,
     .client-logo-card {
         width: 140px;
         height: 75px;
     }
-}
-/* Interactive Xero Badge Styling */
-.software-badge.clickable-badge {
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.software-badge.clickable-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+    .testimonials-section {
+        padding: 60px 20px;
+    }
 
-/* Modal Overlay Background */
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
+    .testimonial-card {
+        max-width: 100%;
+    }
 
-.modal-overlay.active {
-    display: flex;
-}
-
-/* Modal Popup Window */
-.modal-content {
-    background: #ffffff;
-    padding: 24px;
-    border-radius: 12px;
-    max-width: 650px;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: modalFadeIn 0.3s ease;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-@keyframes modalFadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.modal-content h3 {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 1.25rem;
-    color: #333;
-}
-
-/* Certificate Image in Modal */
-.cert-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-}
-
-/* Modal Close Button */
-.modal-close {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    font-weight: bold;
-    color: #666;
-    cursor: pointer;
-    line-height: 1;
-}
-
-.modal-close:hover {
-    color: #000;
-}
-/* Smooth Scroll for Page Anchors */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Clickable Badge Link */
-a.software-badge.clickable-badge {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-a.software-badge.clickable-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Certifications Section Below Main Content */
-.certifications-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.certifications-section h2 {
-    margin-bottom: 30px;
-}
-
-.certification-card {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.certification-card h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.certification-card p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.cert-image-container {
-    display: flex;
-    justify-content: center;
-}
-
-.cert-inline-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    .testimonial-text {
+        max-height: none;
+    }
 }
